@@ -1,0 +1,66 @@
+/* Reproductor */
+.round-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ff69b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.round-button i {
+    color: white;
+    font-size: 2em;
+}
+
+/* Estilos del contador */
+
+.round-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ff69b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.round-button i {
+    color: white;
+    font-size: 2em;
+}
+
+#countdown {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.time-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-circle span {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ff69b4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: white;
+}
+
+.label {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
