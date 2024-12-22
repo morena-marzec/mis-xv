@@ -41,6 +41,10 @@
     font-size: 4rem;
 }  
 
+.font-size-4{
+    font-size: 1.8rem;
+}
+
 .font-color-1{
     color: #fef2f6;
 }
@@ -195,7 +199,7 @@
 }
 
 .cover-subtitle {
-    font-size: 10rem;
+    font-size: 8rem;
     position: absolute;
     bottom: 20px;
     left: 50%;
