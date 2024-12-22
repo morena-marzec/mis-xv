@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('play-button');
-    const audio = new Audio('../static/music/bruno-mars.mp3');
+    const audio = new Audio('static/music/bruno-mars.mp3');
     audio.volume = 0.3; // Set the volume to 50%
     let isPlaying = false;
 

@@ -213,3 +213,11 @@
     width: 100%;
     height: auto;
 }
+
+.div-line {
+        display: flex;
+        justify-content: space-around;
+        width: 100;
+        border-bottom: 4px solid #f6cfd2;
+        color: #f6cfd2;
+}
