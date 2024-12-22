@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let audio;
     let isPlaying = false;
 
-    button.addEventListener('click', function() {
+    function toggleAudio() {
         if (!audio) {
             audio = new Audio('static/music/bruno-mars.mp3');
             audio.volume = 0.3; // Set the volume to 30%
@@ -14,7 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
             audio.play();
         }
         isPlaying = !isPlaying;
-    });
+    }
+
+    button.addEventListener('click', toggleAudio);
+    button.addEventListener('touchstart', toggleAudio);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
