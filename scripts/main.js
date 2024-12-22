@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('play-button');
     let audio;
     let isPlaying = false;
+    let timeout;
 
     function toggleAudio() {
         if (!audio) {
@@ -16,8 +17,25 @@ document.addEventListener('DOMContentLoaded', function() {
         isPlaying = !isPlaying;
     }
 
-    button.addEventListener('click', toggleAudio);
-    button.addEventListener('touchstart', toggleAudio);
+    function startLoading() {
+        button.classList.add('loading');
+        timeout = setTimeout(() => {
+            toggleAudio();
+            button.classList.remove('loading');
+        }, 2000);
+    }
+
+    function cancelLoading() {
+        clearTimeout(timeout);
+        button.classList.remove('loading');
+    }
+
+    button.addEventListener('mousedown', startLoading);
+    button.addEventListener('touchstart', startLoading);
+    button.addEventListener('mouseup', cancelLoading);
+    button.addEventListener('mouseleave', cancelLoading);
+    button.addEventListener('touchend', cancelLoading);
+    button.addEventListener('touchcancel', cancelLoading);
 });
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -133,6 +133,32 @@
     color: #bb687a;
 }
 
+#play-button {
+    position: relative;
+    overflow: hidden;
+}
+
+#play-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: transform 2s linear;
+    visibility: hidden;
+}
+
+#play-button.loading::before {
+    visibility: visible;
+    transform: rotate(360deg);
+}
+
+
 #next-button, 
 #prev-button{
     background-color: #f6cfd2;
