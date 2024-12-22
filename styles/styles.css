@@ -1,9 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+
+/* Fuentes */
+.font-1{
+    font-family: 'Tangerine', serif;
+    font-weight: 800 !important;
+    font-style: normal;
+}
+
+.font-2{
+    font-family: 'Montserrat', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-3{
+    font-family: 'Alice', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-4{
+    font-family: 'Rouge Script', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-size-1{
+    font-size: 1.5rem;
+}
+
+.font-size-2{
+    font-size: 2rem;
+}
+
+.font-size-3{
+    font-size: 4rem;
+}  
+
+.font-color-1{
+    color: #fef2f6;
+}
+
+.font-color-2{
+    color: #bb687a;
+}
+
+.font-color-3{
+    color: #af8231;
+}
+
+/* Colores de fondo */
+.dark-pink{
+    background-color: #bb687a;
+}
+
+.light-pink{
+    background-color: #fbebeb;
+}
+
+.pink{
+    background-color: #f6cfd2;
+}
+
+/* Botones */
+.btn-pink{
+    background-color: #f6cfd2;
+    color: #bb687a;
+    font-weight: 500;
+    border: solid 1px #cc9b8c;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+
+}.btn-pink a{
+    color: #bb687a;
+    text-decoration: none;
+}
+
+.btn-pink-dark{
+    background-color: #bb687a;
+    color: #fef2f6;
+    font-weight: 500;
+    border: solid 1px #cc9b8c;
+    padding: 10px 20px;
+    border-radius: 45px;
+    cursor: pointer;
+}
+.btn-pink-dark a{
+    color: #fef2f6;
+    text-decoration: none;
+}
+
 /* Reproductor */
 .round-button {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
-    background-color: #ff69b4;
+    background-color: #bb687a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,26 +110,35 @@
 
 .round-button i {
     color: white;
-    font-size: 2em;
+    font-size: 2rem;
 }
 
-/* Estilos del contador */
-
-.round-button {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #ff69b4;
+.play-button-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: none;
-    cursor: pointer;
+    margin-top: 20px;
 }
 
-.round-button i {
-    color: white;
-    font-size: 2em;
+.play-button-line{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    border-bottom: 4px solid #bb687a;
+    color: #bb687a;
+}
+
+#next-button, 
+#prev-button{
+    background-color: #f6cfd2;
+    color: #bb687a;
+    cursor: auto;
+}
+
+#next-button i, 
+#prev-button i{
+    color: #bb687a;
 }
 
 #countdown {
@@ -51,16 +157,55 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: #ff69b4;
+    background-color: #f6cfd2;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
-    color: white;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #bb687a;
 }
 
 .label {
     margin-top: 10px;
     font-size: 1em;
-    color: #333;
+    color: #fbebeb;
+}
+
+
+/* Portada */
+.cover-container {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    background-image: url('/static/photos/more13.jpg');
+    background-size: cover; /* Cambiado a cover para cubrir todo el ancho */
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white; /* Asegúrate de que el texto sea visible sobre la imagen */
+    padding: 50px 0; /* Ajusta el padding según sea necesario */
+    width: 100%; /* Asegura que el contenedor cubra el 100% del ancho */
+    height: 100vh; /* El alto será automático */
+}
+
+.cover-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+
+.cover-subtitle {
+    font-size: 10rem;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 5px 0;
+    z-index: 1; /* Aegura que el texto esté por encima de la imagen de fondo */
+}
+
+.banderin{
+    width: 100%;
+    height: auto;
 }
