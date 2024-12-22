@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('play-button');
-    const audio = new Audio('static/music/bruno-mars.mp3');
-    audio.volume = 0.3; // Set the volume to 50%
+    let audio;
     let isPlaying = false;
 
     button.addEventListener('click', function() {
+        if (!audio) {
+            audio = new Audio('static/music/bruno-mars.mp3');
+            audio.volume = 0.3; // Set the volume to 30%
+        }
         if (isPlaying) {
             audio.pause();
         } else {
