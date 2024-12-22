@@ -178,7 +178,7 @@
     text-align: center;
     margin-bottom: 20px;
     position: relative;
-    background-image: url('/static/photos/more13.jpg');
+    background-image: url('./static/photos/more13.jpg');
     background-size: cover; /* Cambiado a cover para cubrir todo el ancho */
     background-repeat: no-repeat;
     background-position: center;
