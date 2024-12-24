@@ -1,14 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const button = document.getElementById('play-button');
-    let audio;
+    let audio = new Audio('static/music/bruno-mars.mp3');
+    audio.volume = 0.3; // Set the volume to 30%
+    audio.load(); // Preload the audio
     let isPlaying = false;
     let timeout;
 
     function toggleAudio() {
-        if (!audio) {
-            audio = new Audio('static/music/bruno-mars.mp3');
-            audio.volume = 0.3; // Set the volume to 30%
-        }
         if (isPlaying) {
             audio.pause();
         } else {
